@@ -68,3 +68,25 @@ function displayUsers (filteredUsers) {
   
   displayUsers(users)
   
+
+// Function to delete a user
+function deleteUser (user) {
+    const index = users.indexOf(user)
+    if (index > -1) {
+      users.splice(index, 1)
+      displayUsers(filterUsers('', ''))
+    }
+  }
+  
+  // Function to handle search button click
+  function handleSearch () {
+    const nameInput = document.getElementById('name-input')
+    const ageInput = document.getElementById('age-input')
+  
+    const name = nameInput.value.trim()
+    const age = +ageInput.value.trim()
+    console.log(nameInput.value, age.valueOf())
+  
+    const filteredUsers = filterUsers(name, age)
+    displayUsers(filteredUsers)
+  }
