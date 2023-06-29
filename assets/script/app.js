@@ -28,3 +28,43 @@ const users = [
     { name: 'Paul Bamock', age: 15 }
   ]
   
+  
+// Function to display filtered users
+function displayUsers (filteredUsers) {
+    const resultsContainer = document.getElementById('results-container')
+    resultsContainer.innerHTML = ''
+  
+    if (filteredUsers.length === 0) {
+      resultsContainer.innerHTML = "<p class='error'>No users found.</p>"
+      return
+    }
+  
+    function getInitial (name) {
+      return name
+        .split(' ')
+        .map((n) => n[0])
+        .slice(0, 2)
+        .join('.')
+    }
+  
+    filteredUsers.forEach((user) => {
+      const userDiv = document.createElement('div')
+      userDiv.classList.add('user')
+  
+      userDiv.innerHTML = ` 
+      <h2>${getInitial(user.name)}</h2>
+       <p>Name: ${user.name}</p>
+          <p>Age: ${user.age}</p>
+          <button class="delete-btn">Delete</button>`
+  
+      const deleteBtn = userDiv.querySelector('.delete-btn')
+      deleteBtn.addEventListener('click', () => {
+        deleteUser(user)
+      })
+  
+      resultsContainer.appendChild(userDiv)
+    })
+  }
+  
+  displayUsers(users)
+  
