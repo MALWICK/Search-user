@@ -103,3 +103,14 @@ function showLoader () {
     const loader = document.getElementById('loader')
     loader.classList.add('hidden')
   }
+
+
+// Event listener for search button click
+const searchBtn = document.getElementById('search-btn')
+searchBtn.addEventListener('click', () => {
+  showLoader()
+  setTimeout(() => {
+    handleSearch()
+    hideLoader()
+  }, 1000)
+})
