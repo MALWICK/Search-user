@@ -96,7 +96,7 @@ function handleSearch () {
   const ageInput = document.getElementById('age-input')
 
   const name = nameInput.value.trim()
-  const age = +ageInput.value.trim()
+  const age = ageInput.value.trim()
   console.log(nameInput.value, age.valueOf())
 
   const filteredUsers = filterUsers(name, age)
