@@ -90,3 +90,16 @@ function deleteUser (user) {
     const filteredUsers = filterUsers(name, age)
     displayUsers(filteredUsers)
   }
+
+
+// Function to show loader while searching users
+function showLoader () {
+    const loader = document.getElementById('loader')
+    loader.classList.remove('hidden')
+  }
+  
+  // Function to hide loader
+  function hideLoader () {
+    const loader = document.getElementById('loader')
+    loader.classList.add('hidden')
+  }
