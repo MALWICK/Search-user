@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+}
+
+#search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 39px;
+  gap: 2px;
+}
+
+#search-container input {
+  width: 250px;
+  padding: 5px;
+}
+
+#search-container button {
+  width: 100px;
+  padding: 6.7px;
+  background-color: #249c24ec;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+#search-container button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+#loader {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#results-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user {
+  background-color: #5a915abd;
+  width: 40%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 12px;
+  margin-bottom: 1.1%;
+}
+
+.user h2 {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
